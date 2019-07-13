@@ -4,7 +4,7 @@
 #
 Name     : binwalk
 Version  : 2.1.0
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/6e/a8/b52eb5fb66f4b582aa21f3b236bcd479bb2d2f602b639d5632a1b080e747/binwalk-2.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6e/a8/b52eb5fb66f4b582aa21f3b236bcd479bb2d2f602b639d5632a1b080e747/binwalk-2.1.0.tar.gz
 Summary  : A tool for searching a given binary image for embedded files
