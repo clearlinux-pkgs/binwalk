@@ -4,7 +4,7 @@
 #
 Name     : binwalk
 Version  : 2.1.0
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/6e/a8/b52eb5fb66f4b582aa21f3b236bcd479bb2d2f602b639d5632a1b080e747/binwalk-2.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6e/a8/b52eb5fb66f4b582aa21f3b236bcd479bb2d2f602b639d5632a1b080e747/binwalk-2.1.0.tar.gz
 Summary  : A tool for searching a given binary image for embedded files
@@ -16,7 +16,7 @@ Requires: binwalk-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-No detailed description available
+UNKNOWN
 
 %package bin
 Summary: bin components for the binwalk package.
@@ -39,6 +39,7 @@ python components for the binwalk package.
 Summary: python3 components for the binwalk package.
 Group: Default
 Requires: python3-core
+Provides: pypi(binwalk)
 
 %description python3
 python3 components for the binwalk package.
@@ -46,17 +47,28 @@ python3 components for the binwalk package.
 
 %prep
 %setup -q -n binwalk-2.1.0
+cd %{_builddir}/binwalk-2.1.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1550586531
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1582850628
+# -Werror is for werrorists
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
