@@ -4,10 +4,10 @@
 #
 Name     : binwalk
 Version  : 2.1.0
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/6e/a8/b52eb5fb66f4b582aa21f3b236bcd479bb2d2f602b639d5632a1b080e747/binwalk-2.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6e/a8/b52eb5fb66f4b582aa21f3b236bcd479bb2d2f602b639d5632a1b080e747/binwalk-2.1.0.tar.gz
-Summary  : A tool for searching a given binary image for embedded files
+Summary  : Firmware analysis tool
 Group    : Development/Tools
 License  : MIT
 Requires: binwalk-bin = %{version}-%{release}
@@ -16,7 +16,7 @@ Requires: binwalk-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-UNKNOWN
+No detailed description available
 
 %package bin
 Summary: bin components for the binwalk package.
@@ -54,8 +54,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582850628
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1585856326
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
