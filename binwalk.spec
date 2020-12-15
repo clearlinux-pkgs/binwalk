@@ -4,7 +4,7 @@
 #
 Name     : binwalk
 Version  : 2.2.0
-Release  : 11
+Release  : 12
 URL      : https://github.com/ReFirmLabs/binwalk/archive/v2.2.0/binwalk-2.2.0.tar.gz
 Source0  : https://github.com/ReFirmLabs/binwalk/archive/v2.2.0/binwalk-2.2.0.tar.gz
 Summary  : Firmware analysis tool
