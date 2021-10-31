@@ -4,7 +4,7 @@
 #
 Name     : binwalk
 Version  : 2.3.3
-Release  : 23
+Release  : 24
 URL      : https://github.com/ReFirmLabs/binwalk/archive/v2.3.3/binwalk-2.3.3.tar.gz
 Source0  : https://github.com/ReFirmLabs/binwalk/archive/v2.3.3/binwalk-2.3.3.tar.gz
 Summary  : Firmware analysis tool
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631553795
+export SOURCE_DATE_EPOCH=1635706854
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
