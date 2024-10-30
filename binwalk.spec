@@ -7,7 +7,7 @@
 #
 Name     : binwalk
 Version  : 2.3.4
-Release  : 28
+Release  : 29
 URL      : https://github.com/ReFirmLabs/binwalk/archive/v2.3.4/binwalk-2.3.4.tar.gz
 Source0  : https://github.com/ReFirmLabs/binwalk/archive/v2.3.4/binwalk-2.3.4.tar.gz
 Summary  : Firmware analysis tool
